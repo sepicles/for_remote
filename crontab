@@ -1,7 +1,8 @@
-# UTC時間で記載する必要あり。
+# ★UTC時間で記載する必要あり★
 
-# 登録済み金融機関状の更新をJST9:10、9:40、16:10、16:40に実行する
+# 登録済み金融機関状の更新をJST9:10、9:40に実行する
 10,40 0 * * * /Dropbox/Synchro/Main/MoneyForwardME/cron/mfme_update_financialinstitution.sh
+# 登録済み金融機関状の更新をJST16:10、16:40に実行する
 10,40 7 * * * /Dropbox/Synchro/Main/MoneyForwardME/cron/mfme_update_financialinstitution.sh
 
 # 登録済み金融機関データの更新状態をチェックをJST10:10に実行する
@@ -9,3 +10,8 @@
 
 # 登録済み金融機関データの最終取得日をチェックをJST17:10に実行する
 10 8 * * * /Dropbox/Synchro/Main/MoneyForwardME/cron/mfme_check_accountslist_modificationdate.sh
+
+# bsportfolio各表ごとのCSV出力をJST18:10に実行する
+10 9 * * * /Dropbox/Synchro/Main/MoneyForwardME/cron/mfme_csv_bsportfolio.sh
+
+
