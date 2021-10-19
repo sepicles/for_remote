@@ -1,5 +1,6 @@
 # ★UTC時間で記載する必要あり★
 
+##MFME##
 # 登録済み金融機関状の更新をJST9:10、9:40に実行する
 10,40 0 * * * /Dropbox/Synchro/Main/MoneyForwardME/cron/mfme_update_financialinstitution.sh
 # 登録済み金融機関状の更新をJST16:10、16:40に実行する
@@ -14,4 +15,9 @@
 # bsportfolio各表ごとのCSV出力をJST18:10に実行する
 10 9 * * * /Dropbox/Synchro/Main/MoneyForwardME/cron/mfme_csv_bsportfolio.sh
 
+##EdogawaLibrary##
+# 江戸川区図書館の借りている本延長をJST0:10に実行する
+10 15 * * * /Dropbox/Synchro/Main/EdogawaLibrary/cron/edogawalibrary_extend.sh
 
+# 江戸川区図書館の借りている本延長をJST0:30に実行する
+30 15 * * * /Dropbox/Synchro/Main/EdogawaLibrary/cron/edogawalibrary_gtasks.sh
